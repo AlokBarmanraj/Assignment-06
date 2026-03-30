@@ -1,14 +1,27 @@
+
+import ActiveUsers from "../Components/DaisyUi/ActiveUsers";
 import DaisyNav from "../Components/DaisyUi/DaisyNav";
+import DigitalTools from "../Components/DaisyUi/DigitalTools";
 import HeroSec from "../Components/DaisyUi/HeroSec";
 import "./App.css";
+
+
+const allPricesCard = async () => {
+  const res = await fetch (
+    "https://gist.githubusercontent.com/AlokBarmanraj/f416485cad57beb14e29eb87b040c613/raw/152e35c7d965dca3e4e79f9c3227b97cca55c3ee/video-editing-tools.json"
+  )
+  return res.json()
+}
+const pricesCard = allPricesCard()
+
 
 function App() {
   return (
     <>
     <DaisyNav></DaisyNav>
     <HeroSec></HeroSec>
-      <h1 className="text-9xl text-amber-500">Hello React</h1>
-      <h3>well</h3>
+    <ActiveUsers></ActiveUsers>
+    <DigitalTools pricesCard = {pricesCard}/>
     </>
   );
 }

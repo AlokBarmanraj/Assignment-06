@@ -3,8 +3,8 @@ import React from "react";
 
 const DaisyNav = () => {
   return (
-    <div className=" bg-white shadow-5xl">
-      <div className="navbar text-black w-full lg:max-w-10/12 mx-auto py-4">
+    <div className=" bg-white shadow-5xl top-0 sticky">
+      <div className="navbar text-black w-full lg:max-w-9/12 mx-auto py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -71,7 +71,7 @@ const DaisyNav = () => {
         <div className="navbar-end gap-3 lg:gap-5">
             <ShoppingCart></ShoppingCart>
             <h3 className="text-lg lg:text-xl font-bold cursor-pointer">Login</h3>
-          <a className="btn bg-gradient-to-r from-[#4A00E0] to-[#8E2DE2] text-white px-5 lg:px-5 py-4 lg:py-5 rounded-full border-none">
+          <a className="btn bg-gradient-to-r from-[#4A00E0] via-[#6A11CB] to-[#8E2DE2] text-white px-5 lg:px-5 py-4 lg:py-5 rounded-full border-none">
             Get Started
           </a>
         </div>
