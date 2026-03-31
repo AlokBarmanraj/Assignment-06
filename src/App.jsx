@@ -3,6 +3,7 @@ import ActiveUsers from "../Components/DaisyUi/ActiveUsers";
 import DaisyNav from "../Components/DaisyUi/DaisyNav";
 import DigitalTools from "../Components/DaisyUi/DigitalTools";
 import HeroSec from "../Components/DaisyUi/HeroSec";
+import Steps from "../Components/DaisyUi/Steps";
 import "./App.css";
 
 
@@ -22,6 +23,7 @@ function App() {
     <HeroSec></HeroSec>
     <ActiveUsers></ActiveUsers>
     <DigitalTools pricesCard = {pricesCard}/>
+    <Steps></Steps>
     </>
   );
 }
