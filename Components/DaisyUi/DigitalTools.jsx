@@ -5,7 +5,7 @@ const DigitalTools = ({ pricesCard }) => {
   const allCard = use(pricesCard);
   console.log(allCard);
   return (
-    <div className="bg-white text-black pb-10">
+    <div className="bg-white text-black pb-22">
       <div className="max-w-9/12 mx-auto pt-22 text-center space-y-3">
         <h1 className="text-4xl lg:text-5xl font-bold">
           Premium Digital Tools
@@ -25,9 +25,9 @@ const DigitalTools = ({ pricesCard }) => {
       </div>
 
       <div className="pt-10">
-        <div className="grid grid-cols-3 gap-6 max-w-9/12 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-9/12 mx-auto">
           {allCard.map((card) => (
-            <div className="bg-[#F2F2F2] rounded-2xl p-5 space-y-3">
+            <div className="bg-[#f8f8f8] border border-blue-100 rounded-2xl p-5 space-y-3">
               <div className="flex justify-end">
                 <div className="bg-[#FEF3C6] w-[100Px] pl-2.5 rounded-full ">
                   <p className="text-[red]">{card.tag}</p>
@@ -42,8 +42,8 @@ const DigitalTools = ({ pricesCard }) => {
                 <h3 className="text-2xl font-bold">${card.price}</h3>
                 <p className="text-slate-600">/Month</p>
               </div>
-              <div>
 
+              <div className="pb-5">
                 {card.features.map((item, index) =>(
                     <div key={index} className="flex items-center">
                   <Check className="text-[#30B868]"></Check>

@@ -2,8 +2,11 @@
 import ActiveUsers from "../Components/DaisyUi/ActiveUsers";
 import DaisyNav from "../Components/DaisyUi/DaisyNav";
 import DigitalTools from "../Components/DaisyUi/DigitalTools";
+import Footer from "../Components/DaisyUi/Footer";
 import HeroSec from "../Components/DaisyUi/HeroSec";
+import PricingCard from "../Components/DaisyUi/PricingCard";
 import Steps from "../Components/DaisyUi/Steps";
+import WorkFlow from "../Components/DaisyUi/WorkFlow";
 import "./App.css";
 
 
@@ -24,6 +27,9 @@ function App() {
     <ActiveUsers></ActiveUsers>
     <DigitalTools pricesCard = {pricesCard}/>
     <Steps></Steps>
+    <PricingCard></PricingCard>
+    <WorkFlow></WorkFlow>
+    <Footer></Footer>
     </>
   );
 }

@@ -1,4 +1,5 @@
 import { Dot, Play } from "lucide-react";
+import banner from "../../assets/banner.png";
 import React from "react";
 
 const HeroSec = () => {
@@ -36,7 +37,7 @@ const HeroSec = () => {
           </div>
         </div>
         <div>
-            <img src="assets/banner.png" alt="" />      
+            <img src={banner} alt="banner" />     
         </div>
       </div>
     </div>

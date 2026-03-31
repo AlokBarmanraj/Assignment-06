@@ -1,6 +1,9 @@
 import { ShoppingCart } from "lucide-react";
 import React from "react";
 
+
+
+
 const DaisyNav = () => {
   return (
     <div className=" bg-white shadow-5xl top-0 sticky">
