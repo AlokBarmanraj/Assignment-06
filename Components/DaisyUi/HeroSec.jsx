@@ -22,7 +22,8 @@ const HeroSec = () => {
             Supercharge Your Digital Workflow
           </h1>
           <p className="text-slate-600">
-            Access premium AI tools, design assets, templates, and productivity software—all in one place. Start creating faster today. Explore
+            Access premium AI tools, design assets, templates, and productivity
+            software—all in one place. Start creating faster today. Explore
             Products
           </p>
           <div className="flex gap-3">
@@ -37,7 +38,7 @@ const HeroSec = () => {
           </div>
         </div>
         <div>
-            <img src={banner} alt="banner" />     
+          <img src={banner} alt="banner" />
         </div>
       </div>
     </div>

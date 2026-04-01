@@ -1,15 +1,12 @@
 import { Car, Check, Key } from "lucide-react";
-import React, { use, useState} from "react";
+import React, { useState } from "react";
 import DigitalToolsCard from "./DigitalToolsCard";
 import Cart from "./Cart";
 
-const DigitalTools = ({ pricesCard }) => {
-  const allCard = use(pricesCard);
+const DigitalTools = ({ pricesCard, carts, setCarts }) => {
+  const allCard = pricesCard;
 
   const [active, setActive] = useState("product");
-
-const [carts, setCarts] = useState([])
-console.log(carts);
 
   return (
     <div>
@@ -22,14 +19,6 @@ console.log(carts);
             Choose from our curated collection of premium digital products
             designed <br /> to boost your productivity and creativity.
           </p>
-          {/* <div className="flex gap-3 w-[230px] mx-auto bg-[#E1E7FF] rounded-full pl-3 py-2">
-          <button className="btn bg-gradient-to-r from-[#4A00E0] via-[#6A11CB] to-[#8E2DE2] text-white px-5 lg:px-5 py-4 lg:py-5 rounded-full border-none">
-            Products
-          </button>
-          <button>
-            Cart (2)
-          </button>
-        </div> */}
 
           <div className="flex w-fit mx-auto bg-[#E1E7FF] rounded-full p-1">
             <input
@@ -70,21 +59,25 @@ console.log(carts);
           peer-checked/Cart:text-white 
             transition-all duration-300"
             >
-              Cart (2)
+              {`Cart(${carts.length})`}
             </label>
           </div>
         </div>
 
         <div className="pt-10">
-
           {active === "product" ? (
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-9/12 mx-auto">
               {allCard.map((card) => (
-                <DigitalToolsCard key={card.id} card={card} carts={carts} setCarts={setCarts}/>
+                <DigitalToolsCard
+                  key={card.id}
+                  card={card}
+                  carts={carts}
+                  setCarts={setCarts}
+                />
               ))}
             </div>
           ) : (
-            <Cart></Cart>
+            <Cart carts={carts} setCarts={setCarts} />
           )}
         </div>
       </div>

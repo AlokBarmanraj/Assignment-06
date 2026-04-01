@@ -1,3 +1,6 @@
+// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 import ActiveUsers from "../Components/DaisyUi/ActiveUsers";
 import DaisyNav from "../Components/DaisyUi/DaisyNav";
 import DigitalTools from "../Components/DaisyUi/DigitalTools";
@@ -7,6 +10,7 @@ import PricingCard from "../Components/DaisyUi/PricingCard";
 import Steps from "../Components/DaisyUi/Steps";
 import WorkFlow from "../Components/DaisyUi/WorkFlow";
 import "./App.css";
+// import { useState } from "react";
 
 const allPricesCard = async () => {
   const res = await fetch(
@@ -14,18 +18,29 @@ const allPricesCard = async () => {
   );
   return res.json();
 };
-const pricesCard = allPricesCard();
+// const pricesCard = allPricesCard();
 
 function App() {
+  // const [carts, setCarts] = useState([]);
+  const [pricesCard, setPricesCard] = useState([]);
+  const [carts, setCarts] = useState([]);
+
+  useEffect(() => {
+    allPricesCard().then((data) => setPricesCard(data));
+  }, []);
+
   return (
     <>
-      <DaisyNav></DaisyNav>
+      {/* <DaisyNav></DaisyNav> */}
+      <DaisyNav carts={carts}></DaisyNav>
       <HeroSec></HeroSec>
       <ActiveUsers></ActiveUsers>
-      <DigitalTools pricesCard={pricesCard}/>
+      {/* <DigitalTools pricesCard={pricesCard}/> */}
+      <DigitalTools pricesCard={pricesCard} carts={carts} setCarts={setCarts} />
       <Steps></Steps>
       <PricingCard></PricingCard>
       <WorkFlow></WorkFlow>
+      <ToastContainer></ToastContainer>
       <Footer></Footer>
     </>
   );

@@ -67,14 +67,16 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="text-slate-600 pb-6"/>
+        <hr className="text-slate-600 pb-6" />
         <div className="flex-none space-y-3 lg:flex justify-between pb-10">
-          <p className="text-slate-400">© 2026 Digitools. All rights reserved.</p>
+          <p className="text-slate-400">
+            © 2026 Digitools. All rights reserved.
+          </p>
           <div className="flex gap-4 text-slate-400">
             <p>Privacy Policy</p>
             <p>Terms of Service</p>
-            <p>Cookies</p>   
-            </div>
+            <p>Cookies</p>
+          </div>
         </div>
       </div>
     </div>
